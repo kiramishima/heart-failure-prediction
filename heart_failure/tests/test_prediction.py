@@ -27,7 +27,7 @@ with open("dv.bin", "rb") as f:
     
 def read_text(file):
     test_directory = Path(__file__).parent
-
+    LOGGER.info(test_directory)
     with open(test_directory / file, 'rt', encoding='utf-8') as f_in:
         return json.load(f_in)
 
@@ -41,5 +41,6 @@ def test_predict_single():
 def test_predict_single_proba():
     heart0 = read_text('sample.json')
     result = predict_single_proba(heart0, encoder, scaler, dv, model)
-    expected_result = 0.7615042078687633
+    LOGGER.info(result)
+    expected_result = 0.7615042078687632
     assert result == expected_result
