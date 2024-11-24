@@ -1,0 +1,26 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask = "*"
+gunicorn = "*"
+scikit-learn = "*"
+polars = "*"
+numpy = "*"
+matplotlib = "*"
+seaborn = "*"
+
+[dev-packages]
+pytest = "*"
+pylint = "*"
+black = "*"
+isort = "*"
+ipython = "*"
+tqdm = "*"
+ipywidgets = "*"
+deepdiff = "*"
+
+[requires]
+python_version = "3.13"
